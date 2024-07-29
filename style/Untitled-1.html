@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Example CSS rules */
+      .myClass {
+        background-color: lightblue; /* Correctly written CSS rule */
+      }
+      .anotherClass {
+        color: red; /* Example CSS rule */
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="">
+      <p>My first expression: {{ 5 + 5 }}</p>
+
+      <div ng-init="myCol='lightblue'">
+        <input style="background-color:{{myCol}}" ng-model="myCol" />
+      </div>
+    </div>
+  </body>
+</html>
