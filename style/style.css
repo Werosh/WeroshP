@@ -13,6 +13,7 @@ body {
 }
 
 .header {
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -23,6 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    /* background-color: chartreuse; */
 }
 
 .logo {
@@ -105,6 +107,11 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.btn-box{
+    position: absolute;
+
 }
 
 .btn-box a {
@@ -202,7 +209,7 @@ body {
 
 .s_media{
     position: absolute;
-    bottom: 40px;
+    bottom:0;
     width: 100%;
     max-width: 345px;
     height: auto;
@@ -284,6 +291,9 @@ body {
         width: 380px;
         margin-top: 60px;
     }
+
+
+    
 }
 
 @media (max-width: 800px){
@@ -291,10 +301,19 @@ body {
     .floating_imgs {
         display: none;
     }
+
+    .about_me_area{
+        display: grid;
+    }
+    .logo{
+        margin: auto;
+    }
 }
 
 @media (max-width: 768px) {
     .header {
+        display: grid;
+        align-items: center;
         padding: 15px 5%;
     }
 
@@ -319,8 +338,9 @@ body {
     }
 
     .btn-box {
+        bottom: 20%;
         max-width: 100%;
-        display: flexbox;
+        /* display: flexbox; */
         gap: 10px;
     }
 
@@ -367,6 +387,7 @@ body {
     .float img {
         max-width: 80px;
     }
+
 }
 
 /* project_area */
@@ -378,11 +399,12 @@ body {
 }
 .about_me_area{
     display: grid;
-    grid-template-columns: repeat(auto-fit,  minmax(200px,auto));
+    grid-template-columns: repeat(auto-fit,  minmax(500px,auto));
     justify-content: space-around;
     align-items: center;
 }
 .about_me{
+    margin: auto;
     margin-left: 80px;
     padding: 10%;
     
@@ -461,6 +483,7 @@ body {
     border: 2px #00abf0 solid;
     width: 100%;
     height: 50px;
+    /* background-color: #ff0000; */
 }
 
 .description h4{
