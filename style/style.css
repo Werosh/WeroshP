@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    /* background-color: chartreuse; */
+ /* background: rgba(0, 0, 0, 0.8); Black with transparency */
 }
 
 .logo {
@@ -207,18 +207,17 @@ body {
 }
 
 
-.s_media{
+.s_media {
     position: absolute;
-    bottom:0;
+    bottom: 50px; 
     width: 100%;
     max-width: 345px;
     height: auto;
     display: flex;
     justify-content: space-around;
-
 }
 
-.s_media a{
+.s_media a {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -236,11 +235,11 @@ body {
     transition: .5s;
 }
 
-.s_media a:hover{
+.s_media a:hover {
     color: #081b29;
 }
 
-.s_media a::before{
+.s_media a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -250,16 +249,12 @@ body {
     background: #00abf0;
     z-index: -1;
     transition: .5s;
-
 }
 
-
-.s_media a:hover::before{
+.s_media a:hover::before {
     width: 100%;
-
-
-
 }
+
 /* Responsive area  */
 
 @keyframes float {
@@ -516,3 +511,10 @@ body {
     opacity: 0;
     pointer-events: none;
 }
+
+/* Your existing CSS */
+/* Add the necessary styles for active links, if not already present */
+.navbar a.active {
+    color: #00abf0;
+  }
+  
