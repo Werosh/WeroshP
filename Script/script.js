@@ -44,3 +44,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+
+  // sending message 
+
+  function sendEmail() {
+    var message = document.getElementById("messageInput").value;
+    var email = "wkriyanjala2020@gmail.com";
+    var subject = "New Message from Contact Form";
+    var emailBody = "Message: " + message;
+
+    console.log("Message:", message); // Debugging line
+    console.log(
+      "Email URL:",
+      "mailto:" +
+        email +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(emailBody)
+    ); // Debugging line
+
+    if (message.trim() !== "") {
+      window.location.href =
+        "mailto:" +
+        email +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(emailBody);
+    } else {
+      alert("Please enter a message before sending.");
+    }
+  }
