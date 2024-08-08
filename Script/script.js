@@ -22,11 +22,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-//save favrite and add to cart
-
-document.querySelectorAll('.fa-heart, .fa-cart-plus').forEach(icon => {
-    icon.addEventListener('click', () => {
-        icon.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.navbar a');
+  
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        // Remove active class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+  
+        // Add active class to the clicked link
+        this.classList.add('active');
+  
+        // Scroll to the section
+        const scrollTarget = document.getElementById(this.dataset.scroll);
+        scrollTarget.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
-});
+  });
+  
