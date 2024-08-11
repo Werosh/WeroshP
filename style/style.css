@@ -190,6 +190,11 @@ body {
     max-width: 150px;
 }
 
+.java_img{
+    animation: float 3.5s ease-out infinite;
+
+}
+
 .html_img {
     animation: float 4s ease-out infinite;
 }
